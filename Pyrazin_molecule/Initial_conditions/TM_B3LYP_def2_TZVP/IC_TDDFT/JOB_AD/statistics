@@ -1,0 +1,134 @@
+
+ DSCF STATISTICS OUTPUT :
+
+ integral neglect threshold       :  0.14E-10
+ integral storage threshold THIZE :  0.10E-04
+ integral storage threshold THIME :         5
+
+ cpu-time for construction of rho     :        0.484 s
+
+
+
+ --------------------    1.ITERATION  --------------------
+ number of shell pairs ii,jj included :         3299
+ number of integral batches included  :      5104762
+ number of batches from twoint        :            0
+ unnecessary integral batches on file :            0
+
+ cpu-time for fock matrix construction :       53.583 s
+ wall clock time elapsed for SCF integral evaluation :       53.611 s
+
+
+         0 2 e - integrals written in         0 blocks requiring       0 k-byte
+
+ cpu-time for xc part                 :       14.629 s
+
+
+
+ --------------------    2.ITERATION  --------------------
+ cpu-time elapsed since end of
+ last fock matrix construction         :       14.941 s
+ number of shell pairs ii,jj included :         3299
+ number of integral batches included  :      5188017
+ number of batches from twoint        :            0
+ unnecessary integral batches on file :            0
+
+ cpu-time for fock matrix construction :       54.291 s
+ cpu-time for xc part                 :       14.909 s
+
+
+
+ --------------------    3.ITERATION  --------------------
+ cpu-time elapsed since end of
+ last fock matrix construction         :       15.230 s
+ number of shell pairs ii,jj included :         3299
+ number of integral batches included  :      5175029
+ number of batches from twoint        :            0
+ unnecessary integral batches on file :            0
+
+ cpu-time for fock matrix construction :       53.491 s
+ cpu-time for xc part                 :       15.015 s
+
+
+
+ --------------------    4.ITERATION  --------------------
+ cpu-time elapsed since end of
+ last fock matrix construction         :       15.332 s
+ number of shell pairs ii,jj included :         3299
+ number of integral batches included  :      5167416
+ number of batches from twoint        :            0
+ unnecessary integral batches on file :            0
+
+ cpu-time for fock matrix construction :       53.393 s
+ cpu-time for xc part                 :       15.019 s
+
+
+
+ --------------------    5.ITERATION  --------------------
+ cpu-time elapsed since end of
+ last fock matrix construction         :       15.332 s
+ number of shell pairs ii,jj included :         3299
+ number of integral batches included  :      5165532
+ number of batches from twoint        :            0
+ unnecessary integral batches on file :            0
+
+ cpu-time for fock matrix construction :       45.915 s
+ cpu-time for xc part                 :       12.584 s
+
+
+
+ --------------------    6.ITERATION  --------------------
+ cpu-time elapsed since end of
+ last fock matrix construction         :       12.890 s
+ number of shell pairs ii,jj included :         3299
+ number of integral batches included  :      5161411
+ number of batches from twoint        :            0
+ unnecessary integral batches on file :            0
+
+ cpu-time for fock matrix construction :       18.127 s
+ cpu-time for xc part                 :        4.294 s
+
+
+
+ --------------------    7.ITERATION  --------------------
+ cpu-time elapsed since end of
+ last fock matrix construction         :        4.579 s
+ number of shell pairs ii,jj included :         3299
+ number of integral batches included  :      5152936
+ number of batches from twoint        :            0
+ unnecessary integral batches on file :            0
+
+ cpu-time for fock matrix construction :       11.970 s
+ cpu-time for xc part                 :        2.528 s
+
+
+
+ --------------------    8.ITERATION  --------------------
+ cpu-time elapsed since end of
+ last fock matrix construction         :        2.805 s
+ number of shell pairs ii,jj included :         3299
+ number of integral batches included  :      5114859
+ number of batches from twoint        :            0
+ unnecessary integral batches on file :            0
+
+ cpu-time for fock matrix construction :        6.167 s
+ cpu-time for xc part                 :        0.781 s
+
+ cpu-time for construction of rho     :        1.460 s
+
+
+
+ --------------------    9.ITERATION  --------------------
+ cpu-time elapsed since end of
+ last fock matrix construction         :        2.785 s
+ number of shell pairs ii,jj included :         3299
+ number of integral batches included  :      5103928
+ number of batches from twoint        :            0
+ unnecessary integral batches on file :            0
+
+ cpu-time for fock matrix construction :       52.907 s
+ cpu-time for xc part                 :       42.827 s
+
+
+  escf  : cpu elapsed       478.256 s
+          wall              480.133 s

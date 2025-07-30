@@ -1,0 +1,175 @@
+
+          ============================================================  
+                                     NEWTON-X                           
+                   Newtonian dynamics close to the crossing seam        
+          ============================================================  
+
+                                  www.newtonx.org                       
+
+    Newton-X CS version 2.7 (build 01, 2023-11-01)
+    www.newtonx.org
+----------------------------------------------------------------------
+    The Newton-X CS program is distributed free of charge for non-
+    commercial and non-profit uses. You may use the program freely 
+    and adapt the code to your needs. Please, if you have any 
+    enhancements, share them with us. You are, however, not allowed 
+    to re-distribute code or binaries in parts or total. Anyone 
+    intending to use Newton-X must contact us. This program is 
+    shipped to the user "as is". There is no guarantee that it will 
+    work as described. Usage is at your own risk, there is no 
+    liability taken for any damage or loss of data and/or money. 
+    If you experience problems, you may contact the developers and 
+    a community of users at the Newton-X discussion group, but bear 
+    in mind that there is no kind of official support for Newton-X.
+
+    Cite Newton-X as:
+    M. Barbatti, G. Granucci, M. Ruckenbauer, F. Plasser, 
+    R. Crespo-Otero, J. Pittner, M. Persico, H. Lischka, NEWTON-X: 
+    a package for Newtonian dynamics close to the crossing seam, 
+    version 2.5, www.newtonx.org (2022).
+
+    M. Barbatti, M. Ruckenbauer, F. Plasser, J. Pittner, G. Granucci, 
+    M. Persico, H. Lischka, WIREs: Comp. Mol. Sci., 4, 26 (2014).
+
+    Please, check the documentation for references to specific 
+    methods and algorithms.
+
+    For download the program, documentation, and tutorial, visit:
+    http://www.newtonx.org
+
+    For support, visit the Newton-X discussion group at:
+    https://groups.google.com/d/forum/newtonx
+----------------------------------------------------------------------
+
+
+Newton-X path: /gxfs_home/cau/suphc356/NEWTONX/newtonx_CS_ownfork_Sept2024/bin
+
+Base directory: /gxfs_work/cau/suphc356/NEWTONX_project/Pyrazin_molecule/CP2K_GPW_PBE_MOLOPT_DZVP_STDA_OD/MOLDYN_NEW_OD_AND_BA/TRAJECTORIES/TRAJ4
+
+STARTING MOLECULAR DYNAMICS   
+
+	Initial parameters:
+	Nat       = 10
+	istep     = 0
+	nstat     = 10
+	nstatdyn  = 4
+	ndamp     = 0
+	kt        = 1
+	dt        = 0.1000
+	t         = 0.0000
+	tmax      = 200.0000
+	nintc     = 24
+	mem       = 200
+	nxrestart = 0
+	thres     = 100.00
+	killstat  = 1
+	timekill  = 0.0000
+	prog      = 14.0
+	lvprt     = 1
+	etot_jump = 0.500
+	etot_drift= 0.500
+	zpecorr   = 0
+
+Non-adiabatic dynamics was requested.
+
+
+moldyn.pl: Parameters for nonadiabatic dynamics (jiri.inp):
+	kross        = 1
+	cascade      = 0
+	current      = 0
+	never_state  = 1
+	include_pair = 0
+	e_ci         = 0.2
+	ci_cons      = 1
+	cio_options  = -o
+	cisc_options = -o
+	idalton      = 64
+	cprog        = 2
+	coptda       = 0
+	ncore        = 0
+	ndisc        = 0
+	blasthread   = 1
+ write_pair:
+Dynamics with CP2K
+
+CP2K path: /gxfs_work/cau/suphc356/cp2k_gcc/exe/local/
+parallel = 64
+exec     = cp2k.psmp
+
+CIOVERLAP path: /gxfs_home/cau/suphc356/NEWTONX/newtonx_CS_ownfork_Sept2024/bin/cioverlap-64
+moldyn.pl: Parameters for nonadiabatic dynamics (sh.inp):
+	integrator   = 5
+	phase        = 1
+	nohop        = 0
+	forcesurf    = 1
+	getphase     = 0
+	nrelax       = 0
+	vdoth        = 1
+	tully        = 1
+	ms           = 20
+	mom          = 1
+	adjmom       = -2
+	probmin      = 0
+	popdev       = 0.05
+	decohmod     = 1
+	decay        = 0.1
+	run_complex  = 0
+       =======================================================================
+            STARTING STEP 0, TIME 0.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Thu Nov  7 06:08:13 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Thu Nov  7 06:08:13 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Thu Nov  7 06:08:51 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Thu Nov  7 06:08:51 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Thu Nov  7 06:08:51 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Thu Nov  7 06:08:51 CET 2024
+---------------------------------------------------------------------------
+moldyn.pl: Surface hopping with SH routine.
+
+
+moldyn.pl: Nonadiabatic dynamics information: 
+             seed       =       0
+
+       =======================================================================
+            FINISHING STEP 0, TIME 0.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 1, TIME 0.1000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Thu Nov  7 06:08:51 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Thu Nov  7 06:08:51 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Thu Nov  7 06:09:29 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Thu Nov  7 06:09:29 CET 2024
+Finished run_cioverlap_cp2k.pl  with ERROR at Thu Nov  7 06:09:32 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl with ERROR at Thu Nov  7 06:09:32 CET 2024
+---------------------------------------------------------------------------
+
+moldyn.pl:   ::ERROR::   step = 1 time = 0.1 fs 
+Trying to save TEMP directory to ../DEBUG 
+See also error messages in DEBUG/runnx.error 

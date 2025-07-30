@@ -1,0 +1,34 @@
+
+Slurm Job Summary
+*****************
+- General information:
+    date = Sat Dec 7 05:16:51 CET 2024
+    hostname = nesh-clk593
+- Job information:
+    JobId = 13520608
+    JobName = initcond
+    UserId = suphc356(746659)
+    Account = suphc356
+    QOS = normal
+    NodeList = nesh-clk593
+    Features = (null)
+    Command = /gxfs_work/cau/suphc356/NEWTONX_project/Pyrazin_molecule/CP2K_GAPW_B3LYP_def2_TZVP/IC_TDDFT_again/JOB_NAD/run_script_nesh.sh
+    WorkDir = /gxfs_work/cau/suphc356/NEWTONX_project/Pyrazin_molecule/CP2K_GAPW_B3LYP_def2_TZVP/IC_TDDFT_again/JOB_NAD
+    StdOut = /gxfs_work/cau/suphc356/NEWTONX_project/Pyrazin_molecule/CP2K_GAPW_B3LYP_def2_TZVP/IC_TDDFT_again/JOB_NAD/test.out
+    StdErr = /gxfs_work/cau/suphc356/NEWTONX_project/Pyrazin_molecule/CP2K_GAPW_B3LYP_def2_TZVP/IC_TDDFT_again/JOB_NAD/test.err
+- Requested resources:
+    Timelimit = 2-00:00:00 ( 172800s )
+    MinMemoryNode = 180G ( 184320.000M )
+    NumNodes = 1
+    NumCPUs = 32
+    NumTasks = 16
+    CPUs/Task = 2
+- Used resources:
+    RunTime = 00:03:22 ( 202s )
+    MaxRSS = 20544452K ( 20062.941M )
+====================
+- Important conclusions and remarks:
+    * !!! Please, always check if the number of requested cores and nodes matches the need of your program/code !!!
+    * !!! Less than 10% of requested walltime used !!! Consider adaptation of your batch script.
+    * !!! Less than 20% of requested main memory used !!! Consider adaptation of your batch script.
+

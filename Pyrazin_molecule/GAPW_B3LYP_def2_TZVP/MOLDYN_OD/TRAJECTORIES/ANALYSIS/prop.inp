@@ -1,0 +1,12 @@
+&collect
+ itrj = 1
+ jtrj = 219
+ tmin = 0
+ tmax = 200
+ dt = 0.5
+ proptype = 2
+ nstat = 4
+ complete_data = 0
+ run_IS = 0
+ run_complex = 0
+/

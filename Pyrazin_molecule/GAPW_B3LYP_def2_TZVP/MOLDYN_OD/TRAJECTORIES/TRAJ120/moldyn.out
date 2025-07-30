@@ -1,0 +1,1971 @@
+
+          ============================================================  
+                                     NEWTON-X                           
+                   Newtonian dynamics close to the crossing seam        
+          ============================================================  
+
+                                  www.newtonx.org                       
+
+    Newton-X CS version 2.7 (build 01, 2023-11-01)
+    www.newtonx.org
+----------------------------------------------------------------------
+    The Newton-X CS program is distributed free of charge for non-
+    commercial and non-profit uses. You may use the program freely 
+    and adapt the code to your needs. Please, if you have any 
+    enhancements, share them with us. You are, however, not allowed 
+    to re-distribute code or binaries in parts or total. Anyone 
+    intending to use Newton-X must contact us. This program is 
+    shipped to the user "as is". There is no guarantee that it will 
+    work as described. Usage is at your own risk, there is no 
+    liability taken for any damage or loss of data and/or money. 
+    If you experience problems, you may contact the developers and 
+    a community of users at the Newton-X discussion group, but bear 
+    in mind that there is no kind of official support for Newton-X.
+
+    Cite Newton-X as:
+    M. Barbatti, G. Granucci, M. Ruckenbauer, F. Plasser, 
+    R. Crespo-Otero, J. Pittner, M. Persico, H. Lischka, NEWTON-X: 
+    a package for Newtonian dynamics close to the crossing seam, 
+    version 2.5, www.newtonx.org (2022).
+
+    M. Barbatti, M. Ruckenbauer, F. Plasser, J. Pittner, G. Granucci, 
+    M. Persico, H. Lischka, WIREs: Comp. Mol. Sci., 4, 26 (2014).
+
+    Please, check the documentation for references to specific 
+    methods and algorithms.
+
+    For download the program, documentation, and tutorial, visit:
+    http://www.newtonx.org
+
+    For support, visit the Newton-X discussion group at:
+    https://groups.google.com/d/forum/newtonx
+----------------------------------------------------------------------
+
+
+Newton-X path: /gxfs_home/cau/suphc356/NEWTONX/newtonx_CS_ownfork_Sept2024/bin
+
+Base directory: /gxfs_work/cau/suphc356/NEWTONX_project/Pyrazin_molecule/CP2K_GAPW_B3LYP_def2_TZVP/MOLDYN_OD/TRAJECTORIES/TRAJ120
+
+STARTING MOLECULAR DYNAMICS   
+
+	Initial parameters:
+	Nat       = 10
+	istep     = 0
+	nstat     = 10
+	nstatdyn  = 4
+	ndamp     = 0
+	kt        = 1
+	dt        = 0.5000
+	t         = 0.0000
+	tmax      = 200.0000
+	nintc     = 24
+	mem       = 200
+	nxrestart = 0
+	thres     = 100.00
+	killstat  = 1
+	timekill  = 0.0000
+	prog      = 14.0
+	lvprt     = 1
+	etot_jump = 0.500
+	etot_drift= 0.500
+	zpecorr   = 0
+
+Non-adiabatic dynamics was requested.
+
+
+moldyn.pl: Parameters for nonadiabatic dynamics (jiri.inp):
+	kross        = 1
+	cascade      = 0
+	current      = 0
+	never_state  = 1
+	include_pair = 0
+	e_ci         = 0.2
+	ci_cons      = 1
+	cio_options  = -o
+	cisc_options = -o
+	idalton      = 64
+	cprog        = 2
+	coptda       = 0
+	ncore        = 0
+	ndisc        = 0
+	blasthread   = 1
+ write_pair:
+Dynamics with CP2K
+
+CP2K path: /gxfs_work/cau/suphc356/cp2k_gcc/exe/local/
+parallel = 64
+exec     = cp2k.psmp
+
+CIOVERLAP path: /gxfs_home/cau/suphc356/NEWTONX/newtonx_CS_ownfork_Sept2024/bin/cioverlap-64
+moldyn.pl: Parameters for nonadiabatic dynamics (sh.inp):
+	integrator   = 5
+	phase        = 1
+	nohop        = 0
+	forcesurf    = 1
+	getphase     = 0
+	nrelax       = 0
+	vdoth        = 1
+	tully        = 1
+	ms           = 20
+	mom          = 1
+	adjmom       = -2
+	probmin      = 0
+	popdev       = 0.05
+	decohmod     = 1
+	decay        = 0.1
+	run_complex  = 0
+       =======================================================================
+            STARTING STEP 0, TIME 0.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 07:38:36 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 07:38:36 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 07:43:04 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 07:43:04 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 07:43:05 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 07:43:05 CET 2024
+---------------------------------------------------------------------------
+moldyn.pl: Surface hopping with SH routine.
+
+
+moldyn.pl: Nonadiabatic dynamics information: 
+             seed       =       0
+
+       =======================================================================
+            FINISHING STEP 0, TIME 0.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 1, TIME 0.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 07:43:05 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 07:43:05 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 07:47:41 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 07:47:41 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 07:47:48 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 07:47:48 CET 2024
+---------------------------------------------------------------------------
+ NO ZPE Correction dynamics ...
+       =======================================================================
+            FINISHING STEP 1, TIME 0.5000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 2, TIME 1.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 07:47:50 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 07:47:50 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 07:52:30 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 07:52:30 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 07:52:36 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 07:52:36 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 2, TIME 1.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 3, TIME 1.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 07:52:38 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 07:52:38 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 07:57:14 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 07:57:14 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 07:57:20 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 07:57:20 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 3, TIME 1.5000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 4, TIME 2.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 07:57:22 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 07:57:22 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 08:02:08 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 08:02:08 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 08:02:14 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 08:02:14 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 4, TIME 2.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 5, TIME 2.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 08:02:16 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 08:02:16 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 08:06:51 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 08:06:51 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 08:06:58 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 08:06:58 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 5, TIME 2.5000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 6, TIME 3.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 08:07:00 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 08:07:00 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 08:11:28 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 08:11:28 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 08:11:34 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 08:11:34 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 6, TIME 3.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 7, TIME 3.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 08:11:36 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 08:11:36 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 08:16:11 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 08:16:11 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 08:16:18 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 08:16:18 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 7, TIME 3.5000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 8, TIME 4.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 08:16:19 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 08:16:20 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 08:20:47 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 08:20:47 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 08:20:54 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 08:20:54 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 8, TIME 4.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 9, TIME 4.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 08:20:55 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 08:20:55 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 08:25:19 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 08:25:19 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 08:25:26 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 08:25:26 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 9, TIME 4.5000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 10, TIME 5.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 08:25:28 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 08:25:28 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 08:29:51 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 08:29:51 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 08:29:58 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 08:29:58 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 10, TIME 5.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 11, TIME 5.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 08:30:00 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 08:30:00 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 08:34:25 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 08:34:25 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 08:34:31 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 08:34:31 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 11, TIME 5.5000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 12, TIME 6.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 08:34:33 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 08:34:33 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 08:39:10 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 08:39:10 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 08:39:17 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 08:39:17 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 12, TIME 6.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 13, TIME 6.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 08:39:18 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 08:39:18 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 08:43:56 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 08:43:56 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 08:44:02 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 08:44:03 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 13, TIME 6.5000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 14, TIME 7.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 08:44:04 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 08:44:04 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 08:48:31 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 08:48:31 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 08:48:37 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 08:48:37 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 14, TIME 7.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 15, TIME 7.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 08:48:39 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 08:48:39 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 08:53:06 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 08:53:06 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 08:53:12 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 08:53:12 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 15, TIME 7.5000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 16, TIME 8.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 08:53:14 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 08:53:14 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 08:57:43 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 08:57:43 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 08:57:50 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 08:57:50 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 16, TIME 8.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 17, TIME 8.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 08:57:51 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 3 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 3.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 08:57:51 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 09:02:19 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 09:02:19 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 09:02:26 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 09:02:26 CET 2024
+---------------------------------------------------------------------------
+Hopping 4 -> 2 occurred: cp2k will be called again.
+ === Time of hopping is 8.5000 === 
+Saving geom and veloc files to DEBUG directory as hopp_geom and hopp_veloc.
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 09:02:28 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 09:02:28 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 09:06:53 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 09:06:53 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 17, TIME 8.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 18, TIME 9.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 09:06:53 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 09:06:53 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 09:11:20 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 09:11:20 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 09:11:27 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 09:11:27 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 18, TIME 9.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 19, TIME 9.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 09:11:28 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 09:11:28 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 09:15:54 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 09:15:54 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 09:16:01 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 09:16:01 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 19, TIME 9.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 20, TIME 10.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 09:16:03 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 09:16:03 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 09:20:30 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 09:20:30 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 09:20:37 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 09:20:37 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 20, TIME 10.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 21, TIME 10.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 09:20:38 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 09:20:39 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 09:25:03 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 09:25:03 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 09:25:10 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 09:25:10 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 21, TIME 10.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 22, TIME 11.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 09:25:12 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 09:25:12 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 09:29:47 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 09:29:47 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 09:29:54 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 09:29:54 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 22, TIME 11.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 23, TIME 11.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 09:29:55 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 09:29:55 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 09:34:42 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 09:34:42 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 09:34:48 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 09:34:48 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 23, TIME 11.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 24, TIME 12.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 09:34:50 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 09:34:50 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 09:39:14 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 09:39:14 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 09:39:20 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 09:39:21 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 24, TIME 12.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 25, TIME 12.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 09:39:22 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 09:39:22 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 09:43:54 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 09:43:54 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 09:44:01 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 09:44:01 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 25, TIME 12.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 26, TIME 13.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 09:44:02 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 09:44:02 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 09:48:26 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 09:48:26 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 09:48:32 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 09:48:32 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 26, TIME 13.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 27, TIME 13.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 09:48:34 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 09:48:34 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 09:53:00 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 09:53:00 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 09:53:06 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 09:53:06 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 27, TIME 13.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 28, TIME 14.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 09:53:08 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 09:53:08 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 09:57:36 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 09:57:36 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 09:57:43 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 09:57:43 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 28, TIME 14.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 29, TIME 14.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 09:57:44 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 09:57:44 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 10:02:14 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 10:02:14 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 10:02:20 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 10:02:21 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 29, TIME 14.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 30, TIME 15.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 10:02:22 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 10:02:22 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 10:07:00 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 10:07:00 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 10:07:07 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 10:07:07 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 30, TIME 15.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 31, TIME 15.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 10:07:09 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 10:07:09 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 10:11:39 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 10:11:39 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 10:11:46 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 10:11:46 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 31, TIME 15.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 32, TIME 16.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 10:11:47 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 10:11:48 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 10:16:28 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 10:16:28 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 10:16:35 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 10:16:35 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 32, TIME 16.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 33, TIME 16.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 10:16:37 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 10:16:37 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 10:21:18 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 10:21:18 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 10:21:25 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 10:21:25 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 33, TIME 16.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 34, TIME 17.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 10:21:27 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 10:21:27 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 10:26:07 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 10:26:07 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 10:26:22 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 10:26:22 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 34, TIME 17.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 35, TIME 17.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 10:26:24 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 10:26:24 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 10:31:00 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 10:31:00 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 10:31:29 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 10:31:29 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 35, TIME 17.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 36, TIME 18.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 10:31:30 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 10:31:31 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 10:36:07 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 10:36:07 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 10:36:13 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 10:36:14 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 36, TIME 18.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 37, TIME 18.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 10:36:15 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 10:36:15 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 10:40:53 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 10:40:53 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 10:40:59 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 10:40:59 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 37, TIME 18.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 38, TIME 19.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 10:41:01 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 10:41:01 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 10:45:38 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 10:45:38 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 10:45:44 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 10:45:44 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 38, TIME 19.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 39, TIME 19.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 10:45:46 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 10:45:46 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 10:50:23 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 10:50:23 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 10:50:30 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 10:50:30 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 39, TIME 19.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 40, TIME 20.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 10:50:32 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 10:50:32 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 10:55:08 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 10:55:08 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 10:55:15 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 10:55:15 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 40, TIME 20.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 41, TIME 20.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 10:55:16 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 10:55:16 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 10:59:54 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 10:59:54 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 11:00:01 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 11:00:01 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 41, TIME 20.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 42, TIME 21.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 11:00:03 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 11:00:03 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 11:04:53 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 11:04:53 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 11:05:00 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 11:05:00 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 42, TIME 21.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 43, TIME 21.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 11:05:02 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 11:05:02 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 11:09:47 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 11:09:47 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 11:09:53 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 11:09:53 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 43, TIME 21.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 44, TIME 22.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 11:09:55 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 11:09:55 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 11:14:26 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 11:14:27 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 11:14:33 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 11:14:33 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 44, TIME 22.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 45, TIME 22.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 11:14:35 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 11:14:35 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 11:19:20 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 11:19:20 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 11:19:26 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 11:19:27 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 45, TIME 22.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 46, TIME 23.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 11:19:28 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 11:19:28 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 11:24:03 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 11:24:03 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 11:24:09 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 11:24:09 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 46, TIME 23.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 47, TIME 23.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 11:24:11 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 11:24:11 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 11:28:45 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 11:28:45 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 11:28:52 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 11:28:52 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 47, TIME 23.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 48, TIME 24.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 11:28:53 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 11:28:53 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 11:33:31 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 11:33:31 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 11:33:37 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 11:33:37 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 48, TIME 24.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 49, TIME 24.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 11:33:39 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 11:33:39 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 11:38:14 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 11:38:14 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 11:38:21 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 11:38:21 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 49, TIME 24.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 50, TIME 25.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 11:38:22 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 11:38:22 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 11:42:59 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 11:42:59 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 11:43:05 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 11:43:05 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 50, TIME 25.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 51, TIME 25.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 11:43:07 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 11:43:07 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 11:47:41 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 11:47:41 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 11:47:48 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 11:47:48 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 51, TIME 25.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 52, TIME 26.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 11:47:50 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 11:47:50 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 11:52:34 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 11:52:34 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 11:52:40 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 11:52:40 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 52, TIME 26.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 53, TIME 26.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 11:52:42 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 11:52:42 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 11:57:27 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 11:57:27 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 11:57:33 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 11:57:33 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 53, TIME 26.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 54, TIME 27.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 11:57:35 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 11:57:35 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 12:02:19 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 12:02:19 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 12:02:26 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 12:02:26 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 54, TIME 27.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 55, TIME 27.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 12:02:27 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 12:02:28 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 12:07:10 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 12:07:10 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 12:07:16 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 12:07:16 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 55, TIME 27.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 56, TIME 28.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 12:07:18 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 12:07:18 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 12:11:41 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 12:11:41 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 12:11:47 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 12:11:47 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 56, TIME 28.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 57, TIME 28.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 12:11:49 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 12:11:49 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 12:16:10 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 12:16:10 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 12:16:17 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 12:16:17 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 57, TIME 28.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 58, TIME 29.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 12:16:19 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 12:16:19 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 12:20:38 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 12:20:38 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 12:20:44 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 12:20:45 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 58, TIME 29.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 59, TIME 29.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 12:20:46 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 12:20:46 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 12:25:24 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 12:25:24 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 12:25:31 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 12:25:31 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 59, TIME 29.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 60, TIME 30.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 12:25:32 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 12:25:32 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 12:30:18 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 12:30:18 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 12:30:25 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 12:30:25 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 60, TIME 30.0000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 61, TIME 30.5000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 12:30:27 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 12:30:27 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 12:35:14 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 12:35:14 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 12:35:21 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 12:35:21 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 61, TIME 30.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 62, TIME 31.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 12:35:22 CET 2024
+WARNING: NSTATES is NOT set to 9 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT NSTATES 10 to NEW INPUT NSTATES 9.
+WARNING: STATE is NOT set to 1 in CP2K input, but requested.
+WARNING: Thus resetting OLD INPUT STATE 4 to NEW INPUT STATE 1.
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 12:35:22 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 12:40:07 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 12:40:07 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 12:40:13 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 12:40:13 CET 2024
+---------------------------------------------------------------------------
+
+moldyn.pl:   ::ERROR::   step = 62 time = 31 fs 
+Trying to save TEMP directory to ../DEBUG 
+---------------------------------------------------------------------------
+Starting sh  at Sun Dec 15 12:40:14 CET 2024
+Finished sh  with ERROR at Sun Dec 15 12:40:14 CET 2024
+See also error messages in DEBUG/runnx.error 
+---------------------------------------------------------------------------
