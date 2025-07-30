@@ -1,0 +1,1855 @@
+
+          ============================================================  
+                                     NEWTON-X                           
+                   Newtonian dynamics close to the crossing seam        
+          ============================================================  
+
+                                  www.newtonx.org                       
+
+    Newton-X CS version 2.7 (build 01, 2023-11-01)
+    www.newtonx.org
+----------------------------------------------------------------------
+    The Newton-X CS program is distributed free of charge for non-
+    commercial and non-profit uses. You may use the program freely 
+    and adapt the code to your needs. Please, if you have any 
+    enhancements, share them with us. You are, however, not allowed 
+    to re-distribute code or binaries in parts or total. Anyone 
+    intending to use Newton-X must contact us. This program is 
+    shipped to the user "as is". There is no guarantee that it will 
+    work as described. Usage is at your own risk, there is no 
+    liability taken for any damage or loss of data and/or money. 
+    If you experience problems, you may contact the developers and 
+    a community of users at the Newton-X discussion group, but bear 
+    in mind that there is no kind of official support for Newton-X.
+
+    Cite Newton-X as:
+    M. Barbatti, G. Granucci, M. Ruckenbauer, F. Plasser, 
+    R. Crespo-Otero, J. Pittner, M. Persico, H. Lischka, NEWTON-X: 
+    a package for Newtonian dynamics close to the crossing seam, 
+    version 2.5, www.newtonx.org (2022).
+
+    M. Barbatti, M. Ruckenbauer, F. Plasser, J. Pittner, G. Granucci, 
+    M. Persico, H. Lischka, WIREs: Comp. Mol. Sci., 4, 26 (2014).
+
+    Please, check the documentation for references to specific 
+    methods and algorithms.
+
+    For download the program, documentation, and tutorial, visit:
+    http://www.newtonx.org
+
+    For support, visit the Newton-X discussion group at:
+    https://groups.google.com/d/forum/newtonx
+----------------------------------------------------------------------
+
+
+Newton-X path: /gxfs_home/cau/suphc356/NEWTONX/newtonx_CS_ownfork_Sept2024/bin
+
+Base directory: /gxfs_work/cau/suphc356/NEWTONX_project/Pyrazin_molecule/CP2K_GAPW_B3LYP_def2_TZVP/MOLDYN_OD/TRAJECTORIES/TRAJ132
+
+STARTING MOLECULAR DYNAMICS   
+
+	Initial parameters:
+	Nat       = 10
+	istep     = 0
+	nstat     = 10
+	nstatdyn  = 4
+	ndamp     = 0
+	kt        = 1
+	dt        = 0.5000
+	t         = 0.0000
+	tmax      = 200.0000
+	nintc     = 24
+	mem       = 200
+	nxrestart = 0
+	thres     = 100.00
+	killstat  = 1
+	timekill  = 0.0000
+	prog      = 14.0
+	lvprt     = 1
+	etot_jump = 0.500
+	etot_drift= 0.500
+	zpecorr   = 0
+
+Non-adiabatic dynamics was requested.
+
+
+moldyn.pl: Parameters for nonadiabatic dynamics (jiri.inp):
+	kross        = 1
+	cascade      = 0
+	current      = 0
+	never_state  = 1
+	include_pair = 0
+	e_ci         = 0.2
+	ci_cons      = 1
+	cio_options  = -o
+	cisc_options = -o
+	idalton      = 64
+	cprog        = 2
+	coptda       = 0
+	ncore        = 0
+	ndisc        = 0
+	blasthread   = 1
+ write_pair:
+Dynamics with CP2K
+
+CP2K path: /gxfs_work/cau/suphc356/cp2k_gcc/exe/local/
+parallel = 64
+exec     = cp2k.psmp
+
+CIOVERLAP path: /gxfs_home/cau/suphc356/NEWTONX/newtonx_CS_ownfork_Sept2024/bin/cioverlap-64
+moldyn.pl: Parameters for nonadiabatic dynamics (sh.inp):
+	integrator   = 5
+	phase        = 1
+	nohop        = 0
+	forcesurf    = 1
+	getphase     = 0
+	nrelax       = 0
+	vdoth        = 1
+	tully        = 1
+	ms           = 20
+	mom          = 1
+	adjmom       = -2
+	probmin      = 0
+	popdev       = 0.05
+	decohmod     = 1
+	decay        = 0.1
+	run_complex  = 0
+       =======================================================================
+            STARTING STEP 0, TIME 0.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 13:23:27 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 13:23:27 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 13:28:10 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 13:28:10 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 13:28:11 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 13:28:11 CET 2024
+---------------------------------------------------------------------------
+moldyn.pl: Surface hopping with SH routine.
+
+
+moldyn.pl: Nonadiabatic dynamics information: 
+             seed       =       0
+
+       =======================================================================
+            FINISHING STEP 0, TIME 0.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 1, TIME 0.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 13:28:11 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 13:28:11 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 13:32:39 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 13:32:39 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 13:32:45 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 13:32:45 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 1, TIME 0.5000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 2, TIME 1.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 13:32:47 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 13:32:47 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 13:37:29 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 13:37:29 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 13:37:35 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 13:37:35 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 2, TIME 1.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 3, TIME 1.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 13:37:37 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 13:37:37 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 13:42:14 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 13:42:14 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 13:42:21 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 13:42:21 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 3, TIME 1.5000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 4, TIME 2.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 13:42:23 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 13:42:23 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 13:47:01 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 13:47:01 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 13:47:08 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 13:47:08 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 4, TIME 2.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 5, TIME 2.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 13:47:09 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 13:47:10 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 13:51:49 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 13:51:49 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 13:51:56 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 13:51:56 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 5, TIME 2.5000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 6, TIME 3.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 13:51:58 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 13:51:58 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 13:56:40 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 13:56:40 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 13:56:47 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 13:56:47 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 6, TIME 3.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 7, TIME 3.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 13:56:48 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 13:56:48 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 14:01:21 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 14:01:21 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 14:01:28 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 14:01:28 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 7, TIME 3.5000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 8, TIME 4.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 14:01:29 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 14:01:29 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 14:06:00 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 14:06:00 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 14:06:07 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 14:06:07 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 8, TIME 4.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 9, TIME 4.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 14:06:09 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 14:06:09 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 14:10:53 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 14:10:53 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 14:10:59 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 14:11:00 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 9, TIME 4.5000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 10, TIME 5.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 14:11:01 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 14:11:01 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 14:15:41 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 14:15:41 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 14:15:48 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 14:15:48 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 10, TIME 5.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 11, TIME 5.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 14:15:49 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 14:15:50 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 14:20:30 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 14:20:30 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 14:20:36 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 14:20:36 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 11, TIME 5.5000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 12, TIME 6.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 14:20:38 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 14:20:38 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 14:25:18 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 14:25:18 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 14:25:24 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 14:25:24 CET 2024
+---------------------------------------------------------------------------
+Hopping 4 -> 3 occurred: cp2k will be called again.
+ === Time of hopping is 6.0000 === 
+Saving geom and veloc files to DEBUG directory as hopp_geom and hopp_veloc.
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 14:25:26 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 14:25:26 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 14:30:06 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 14:30:06 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 12, TIME 6.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 13, TIME 6.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 14:30:06 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 14:30:06 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 14:34:46 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 14:34:46 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 14:34:52 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 14:34:52 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 13, TIME 6.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 14, TIME 7.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 14:34:54 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 14:34:54 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 14:39:34 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 14:39:34 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 14:39:41 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 14:39:41 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 14, TIME 7.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 15, TIME 7.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 14:39:43 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 14:39:43 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 14:44:13 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 14:44:13 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 14:44:20 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 14:44:20 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 15, TIME 7.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 16, TIME 8.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 14:44:22 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 14:44:22 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 14:48:48 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 14:48:48 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 14:48:55 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 14:48:55 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 16, TIME 8.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 17, TIME 8.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 14:48:57 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 14:48:57 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 14:53:18 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 14:53:18 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 14:53:24 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 14:53:24 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 17, TIME 8.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 18, TIME 9.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 14:53:26 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 14:53:26 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 14:57:59 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 14:57:59 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 14:58:06 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 14:58:06 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 18, TIME 9.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 19, TIME 9.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 14:58:08 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 14:58:08 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 15:02:51 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 15:02:51 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 15:02:58 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 15:02:58 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 19, TIME 9.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 20, TIME 10.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 15:03:00 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 15:03:00 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 15:07:32 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 15:07:32 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 15:07:38 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 15:07:38 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 20, TIME 10.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 21, TIME 10.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 15:07:40 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 15:07:40 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 15:12:13 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 15:12:13 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 15:12:20 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 15:12:20 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 21, TIME 10.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 22, TIME 11.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 15:12:21 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 15:12:22 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 15:17:04 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 15:17:04 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 15:17:11 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 15:17:11 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 22, TIME 11.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 23, TIME 11.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 15:17:13 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 15:17:13 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 15:21:55 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 15:21:55 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 15:22:01 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 15:22:01 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 23, TIME 11.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 24, TIME 12.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 15:22:03 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 15:22:03 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 15:26:23 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 15:26:23 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 15:26:30 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 15:26:30 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 24, TIME 12.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 25, TIME 12.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 15:26:31 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 15:26:32 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 15:31:05 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 15:31:05 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 15:31:12 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 15:31:12 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 25, TIME 12.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 26, TIME 13.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 15:31:13 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 15:31:13 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 15:35:47 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 15:35:47 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 15:35:54 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 15:35:54 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 26, TIME 13.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 27, TIME 13.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 15:35:55 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 15:35:55 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 15:40:29 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 15:40:29 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 15:40:36 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 15:40:36 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 27, TIME 13.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 28, TIME 14.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 15:40:37 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 15:40:37 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 15:45:11 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 15:45:11 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 15:45:17 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 15:45:17 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 28, TIME 14.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 29, TIME 14.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 15:45:19 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 15:45:19 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 15:49:54 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 15:49:55 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 15:50:01 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 15:50:01 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 29, TIME 14.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 30, TIME 15.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 15:50:03 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 15:50:03 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 15:54:47 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 15:54:47 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 15:54:54 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 15:54:54 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 30, TIME 15.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 31, TIME 15.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 15:54:56 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 15:54:56 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 15:59:42 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 15:59:42 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 15:59:49 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 15:59:49 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 31, TIME 15.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 32, TIME 16.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 15:59:50 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 15:59:50 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 16:04:26 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 16:04:26 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 16:04:36 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 16:04:36 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 32, TIME 16.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 33, TIME 16.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 16:04:38 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 16:04:38 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 16:09:07 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 16:09:07 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 16:09:14 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 16:09:14 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 33, TIME 16.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 34, TIME 17.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 16:09:16 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 16:09:16 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 16:13:44 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 16:13:44 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 16:13:51 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 16:13:51 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 34, TIME 17.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 35, TIME 17.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 16:13:53 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 16:13:53 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 16:18:21 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 16:18:21 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 16:18:28 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 16:18:28 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 35, TIME 17.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 36, TIME 18.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 16:18:29 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 16:18:29 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 16:22:58 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 16:22:58 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 16:23:04 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 16:23:04 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 36, TIME 18.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 37, TIME 18.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 16:23:06 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 16:23:06 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 16:27:36 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 16:27:36 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 16:27:42 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 16:27:42 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 37, TIME 18.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 38, TIME 19.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 16:27:45 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 16:27:45 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 16:32:15 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 16:32:15 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 16:32:22 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 16:32:22 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 38, TIME 19.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 39, TIME 19.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 16:32:24 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 16:32:24 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 16:36:54 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 16:36:54 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 16:37:00 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 16:37:00 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 39, TIME 19.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 40, TIME 20.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 16:37:02 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 16:37:02 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 16:41:29 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 16:41:29 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 16:41:36 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 16:41:36 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 40, TIME 20.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 41, TIME 20.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 16:41:37 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 16:41:38 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 16:46:16 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 16:46:16 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 16:46:22 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 16:46:22 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 41, TIME 20.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 42, TIME 21.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 16:46:24 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 16:46:24 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 16:51:02 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 16:51:02 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 16:51:09 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 16:51:09 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 42, TIME 21.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 43, TIME 21.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 16:51:10 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 16:51:10 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 16:55:42 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 16:55:42 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 16:55:48 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 16:55:48 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 43, TIME 21.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 44, TIME 22.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 16:55:50 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 16:55:50 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 17:00:24 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 17:00:24 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 17:00:30 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 17:00:30 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 44, TIME 22.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 45, TIME 22.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 17:00:32 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 17:00:32 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 17:05:05 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 17:05:05 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 17:05:12 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 17:05:12 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 45, TIME 22.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 46, TIME 23.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 17:05:14 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 17:05:14 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 17:09:57 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 17:09:57 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 17:10:03 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 17:10:03 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 46, TIME 23.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 47, TIME 23.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 17:10:05 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 17:10:05 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 17:14:40 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 17:14:40 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 17:14:46 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 17:14:46 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 47, TIME 23.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 48, TIME 24.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 17:14:48 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 17:14:48 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 17:19:22 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 17:19:22 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 17:19:29 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 17:19:29 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 48, TIME 24.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 49, TIME 24.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 17:19:30 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 17:19:30 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 17:24:03 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 17:24:03 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 17:24:10 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 17:24:10 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 49, TIME 24.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 50, TIME 25.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 17:24:12 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 17:24:12 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 17:28:47 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 17:28:47 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 17:28:54 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 17:28:54 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 50, TIME 25.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 51, TIME 25.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 17:28:56 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 17:28:56 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 17:33:28 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 17:33:28 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 17:33:35 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 17:33:35 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 51, TIME 25.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 52, TIME 26.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 17:33:36 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 17:33:36 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 17:38:19 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 17:38:19 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 17:38:25 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 17:38:25 CET 2024
+---------------------------------------------------------------------------
+Hopping 3 -> 4 occurred: cp2k will be called again.
+ === Time of hopping is 26.0000 === 
+Saving geom and veloc files to DEBUG directory as hopp_geom and hopp_veloc.
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 17:38:27 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 17:38:27 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 17:43:13 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 17:43:13 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 52, TIME 26.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 53, TIME 26.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 17:43:13 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 17:43:13 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 17:47:59 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 17:47:59 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 17:48:06 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 17:48:06 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 53, TIME 26.5000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 54, TIME 27.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 17:48:07 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 17:48:07 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 17:52:43 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 17:52:43 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 17:52:50 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 17:52:50 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 54, TIME 27.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 55, TIME 27.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 17:52:52 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 17:52:52 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 17:57:17 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 17:57:17 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 17:57:24 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 17:57:24 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 55, TIME 27.5000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 56, TIME 28.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 17:57:25 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 17:57:25 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 18:02:01 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 18:02:01 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 18:02:08 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 18:02:08 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 56, TIME 28.0000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 57, TIME 28.5000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 18:02:09 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 18:02:10 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 18:06:34 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 18:06:34 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 18:06:41 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 18:06:41 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 57, TIME 28.5000 fs on SURFACE 4            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 58, TIME 29.0000 fs on SURFACE 4             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 18:06:42 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 18:06:43 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 18:11:05 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 18:11:05 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 18:11:12 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 18:11:12 CET 2024
+---------------------------------------------------------------------------
+Hopping 4 -> 3 occurred: cp2k will be called again.
+ === Time of hopping is 29.0000 === 
+Saving geom and veloc files to DEBUG directory as hopp_geom and hopp_veloc.
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 18:11:13 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 18:11:13 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 18:15:40 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 18:15:40 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 58, TIME 29.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 59, TIME 29.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 18:15:40 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 18:15:40 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 18:20:16 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 18:20:16 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 18:20:23 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 18:20:23 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 59, TIME 29.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 60, TIME 30.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 18:20:25 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 18:20:25 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 18:25:10 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 18:25:10 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 18:25:16 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 18:25:16 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 60, TIME 30.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 61, TIME 30.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 18:25:18 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 18:25:18 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 18:30:04 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 18:30:05 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 18:30:11 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 18:30:11 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 61, TIME 30.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 62, TIME 31.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 18:30:13 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 18:30:13 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 18:34:57 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 18:34:57 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 18:35:03 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 18:35:04 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 62, TIME 31.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 63, TIME 31.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 18:35:05 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 18:35:05 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 18:39:51 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 18:39:51 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 18:39:58 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 18:39:58 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 63, TIME 31.5000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 64, TIME 32.0000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 18:40:00 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 18:40:00 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 18:44:35 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 18:44:35 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 18:44:42 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 18:44:42 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 64, TIME 32.0000 fs on SURFACE 3            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 65, TIME 32.5000 fs on SURFACE 3             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 18:44:43 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 18:44:44 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 18:49:16 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 18:49:16 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 18:49:23 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 18:49:23 CET 2024
+---------------------------------------------------------------------------
+Hopping 3 -> 2 occurred: cp2k will be called again.
+ === Time of hopping is 32.5000 === 
+Saving geom and veloc files to DEBUG directory as hopp_geom and hopp_veloc.
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 18:49:24 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 18:49:24 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 18:54:02 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 18:54:02 CET 2024
+---------------------------------------------------------------------------
+       =======================================================================
+            FINISHING STEP 65, TIME 32.5000 fs on SURFACE 2            
+       =======================================================================
+
+ write_pair:
+       =======================================================================
+            STARTING STEP 66, TIME 33.0000 fs on SURFACE 2             
+       =======================================================================
+
+
+Starting normal electronic structure calculation
+
+---------------------------------------------------------------------------
+Starting run-cp2k.pl at Sun Dec 15 18:54:02 CET 2024
+---------------------------------------------------------------------------
+Starting mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out at Sun Dec 15 18:54:02 CET 2024
+Finished mpirun -n 16 /gxfs_work/cau/suphc356/cp2k_gcc/exe/local//cp2k.psmp -i cp2k.inp -o cp2k.out successfuly at Sun Dec 15 18:58:17 CET 2024
+---------------------------------------------------------------------------
+Overlap matrix will be used to compute time-derivative couplings.
+---------------------------------------------------------------------------
+Starting run_cioverlap_cp2k.pl  at Sun Dec 15 18:58:17 CET 2024
+Finished run_cioverlap_cp2k.pl  successfuly at Sun Dec 15 18:58:24 CET 2024
+---------------------------------------------------------------------------
+Finished run-cp2k.pl successfuly at Sun Dec 15 18:58:24 CET 2024
+---------------------------------------------------------------------------
+
+moldyn.pl:   ::ERROR::   step = 66 time = 33 fs 
+Trying to save TEMP directory to ../DEBUG 
+---------------------------------------------------------------------------
+Finished sh  with ERROR at Sun Dec 15 18:58:24 CET 2024
+See also error messages in DEBUG/runnx.error 
+---------------------------------------------------------------------------

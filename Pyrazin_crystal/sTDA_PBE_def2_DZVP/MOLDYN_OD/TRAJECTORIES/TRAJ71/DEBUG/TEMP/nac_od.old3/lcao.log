@@ -1,0 +1,10 @@
+&MOINP
+ NBAS=392        ,
+ FMOCOEF="mo_coeffs                                                                                                               ",
+ NHEAD=0          ,
+ NCOL=1          ,
+ FLCAO="lcao                                                                                                                    ",
+ IPROG=3          ,
+ NMOBAS=392        ,
+ /
+ Mocoef was read. Starting transpose.
