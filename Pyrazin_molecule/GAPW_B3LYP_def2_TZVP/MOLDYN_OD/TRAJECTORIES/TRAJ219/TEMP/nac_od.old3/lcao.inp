@@ -1,9 +1,0 @@
-&moinp
- nbas = 210
- iprog = 3
- nhead = 0
- ncol = 1
- fmocoef = "mo_coeffs" 
- flcao = "lcao"
- nmobas = 210
- / 

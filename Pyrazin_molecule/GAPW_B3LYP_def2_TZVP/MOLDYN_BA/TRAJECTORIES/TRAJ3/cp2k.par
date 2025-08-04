@@ -1,2 +1,0 @@
- parallel = 64
- exec = cp2k.psmp
