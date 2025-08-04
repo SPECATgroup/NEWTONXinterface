@@ -1,0 +1,17 @@
+&jirinp 
+ cprog = 2
+	cascade      = 0
+	current      = 0
+	never_state  = 1
+	include_pair = 0
+	e_ci         = 0.2
+	ci_cons      = 1
+	cio_options  = NULL
+	cisc_options = NULL
+	coptda       = 0
+	ncore        = 0
+	idalton      = 64
+	cprog        = 2
+	ndisc        = 0
+	blasthread   = 1
+/

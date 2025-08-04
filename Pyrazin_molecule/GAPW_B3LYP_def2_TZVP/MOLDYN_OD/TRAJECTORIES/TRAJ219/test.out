@@ -1,0 +1,34 @@
+
+Slurm Job Summary
+*****************
+- General information:
+    date = Thu Dec 19 00:12:58 CET 2024
+    hostname = nesh-clk484
+- Job information:
+    JobId = 13592540
+    JobName = b3lyp219
+    UserId = suphc356(746659)
+    Account = suphc356
+    QOS = normal
+    NodeList = nesh-clk484,nesh-srp179
+    Features = (null)
+    Command = /gxfs_work/cau/suphc356/NEWTONX_project/Pyrazin_molecule/CP2K_GAPW_B3LYP_def2_TZVP/MOLDYN_OD/TRAJECTORIES/TRAJ219/run_script_nesh_newtonx.sh
+    WorkDir = /gxfs_work/cau/suphc356/NEWTONX_project/Pyrazin_molecule/CP2K_GAPW_B3LYP_def2_TZVP/MOLDYN_OD/TRAJECTORIES/TRAJ219
+    StdOut = /gxfs_work/cau/suphc356/NEWTONX_project/Pyrazin_molecule/CP2K_GAPW_B3LYP_def2_TZVP/MOLDYN_OD/TRAJECTORIES/TRAJ219/test.out
+    StdErr = /gxfs_work/cau/suphc356/NEWTONX_project/Pyrazin_molecule/CP2K_GAPW_B3LYP_def2_TZVP/MOLDYN_OD/TRAJECTORIES/TRAJ219/test.err
+- Requested resources:
+    Timelimit = 2-00:00:00 ( 172800s )
+    MinMemoryNode = 180G ( 184320.000M )
+    NumNodes = 2
+    NumCPUs = 64
+    NumTasks = 64
+    CPUs/Task = 1
+- Used resources:
+    RunTime = 1-08:01:58 ( 115318s )
+    MaxRSS = 19686876K ( 19225.465M )
+====================
+- Important conclusions and remarks:
+    * !!! Please, always check if the number of requested cores and nodes matches the need of your program/code !!!
+    * !!! Less than 70% of requested walltime used !!! Consider adaptation of your batch script.
+    * !!! Less than 20% of requested main memory used !!! Consider adaptation of your batch script.
+
